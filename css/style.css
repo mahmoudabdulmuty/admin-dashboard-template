@@ -393,7 +393,7 @@ img.nav__language {
 }
 
 .main-filters .radio-group .list-view-label.active {
-  background-color: red;
+  background-color: rgba(115, 103, 240, 0.2);
 }
 
 .main-filters .radio-group input {
@@ -668,22 +668,40 @@ svg.muted {
   transition: all 0.2s ease;
 }
 
-.grid-view {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 2.8rem;
   height: fit-content;
 }
 
-.grid-view .card {
-  background-color: #fff;
-  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+.grid.grid-view {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid.list-view {
+  grid-template-columns: 1fr;
+}
+
+.grid .card {
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
   cursor: pointer;
+  background-color: #fff;
   border-radius: 5px;
+}
+
+.grid.grid-view .card {
   display: flex;
   flex-direction: column;
 }
+
+.grid.list-view .card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+
 
 .card .img-box {
   min-height: 22.19rem;
@@ -693,13 +711,13 @@ svg.muted {
   max-width: 100%;
 }
 
-.grid-view .card:hover {
+.grid .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 25px 0 rgb(34 41 47 / 25%);
   overflow: hidden;
 }
 
-.grid-view img {
+.grid img {
   width: 100%;
 }
 

@@ -1,6 +1,6 @@
 feather.replace();
 
-const gridContainer = document.querySelector('.grid-view');
+const gridContainer = document.querySelector('.grid');
 const searchInput = document.querySelector('#search');
 const multiRangeInputs = document.querySelectorAll('input[name="multi-range"]');
 const menubarActive = document.querySelector('.menubar__item--active');
@@ -9,7 +9,7 @@ const scrollToTop = document.getElementById('toTopBtn');
 const mobileNav = document.querySelector('.menu-navbar');
 const menuBar = document.querySelector('.menubar');
 const closeIcon = document.querySelector('.close-icon');
-const listViewBtns = document.querySelectorAll('.list-view');
+const listViewBtns = document.querySelectorAll('.option-view');
 const listViewBtnsLabel = document.querySelectorAll('.list-view-label');
 const overlay = document.querySelector('.overlay');
 
@@ -19,8 +19,21 @@ searchInput.addEventListener('input', filterList);
 scrollToTop.addEventListener('click', topFunction);
 
 listViewBtns.forEach((btn, i) => {
-  btn.addEventListener('click', () => {
-    listViewBtnsLabel[i].classList.add('active');
+  btn.addEventListener('click', (e) => {
+    gridContainer.classList.remove('grid-view');
+    gridContainer.classList.remove('list-view');
+
+    listViewBtnsLabel.forEach((label) => {
+      label.classList.remove('active');
+    });
+
+    if (e.target.value === 'on' && btn.classList.contains('grid-view')) {
+      listViewBtnsLabel[i].classList.add('active');
+      gridContainer.classList.add('grid-view');
+    } else if (e.target.value === 'on' && btn.classList.contains('list-view')) {
+      listViewBtnsLabel[i].classList.add('active');
+      gridContainer.classList.add('list-view');
+    }
   });
 });
 
@@ -53,12 +66,9 @@ function filterPrice() {
 }
 
 function displayProducts() {
-  const getData = async () => {
-    const res = await fetch('./store-demo-data.json');
-    const data = await res.json();
-    gridContainer.innerHTML = data.products
-      .map((product) => {
-        return `<div id=${product.id} class='card'>
+  gridContainer.innerHTML = products
+    .map((product) => {
+      return `<div id=${product.id} class='card'>
       <div class="img-box flex-align-center">
         <img src=${product.img} alt=${product.name} />
       </div>
@@ -148,8 +158,8 @@ function displayProducts() {
           </div>
           <h6 class='item-price'>$${product.price}</h6>
         </div>
-        <h6 class='item-name'>${product.name.slice(0, 19)}...</h6>
-        <p class='item-description'>${product.description.slice(0, 25)}..</p>
+        <h6 class='item-name'>${product.name}</h6>
+        <p class='item-description'>${product.description}</p>
       </div>
       <div class='item-options flex-align-center'>
         <a class='btn-wishlist flex-align-center gap-1' href='#'>
@@ -162,10 +172,8 @@ function displayProducts() {
         </a>
       </div>
     </div>`;
-      })
-      .join('');
-  };
-  getData();
+    })
+    .join('');
 }
 
 // search-filter
@@ -180,6 +188,8 @@ function filterList() {
 
   const filterResults = document.querySelector('.filters__results');
   let filterResultsSum = 0;
+
+  console.log(gridCards);
 
   productNames.forEach((productName, index) => {
     if (productName.includes(filter)) {
