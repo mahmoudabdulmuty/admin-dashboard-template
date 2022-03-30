@@ -1,0 +1,110 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  .menubar {
+    left: -260px;
+    transition: all 0.3s;
+  }
+  .menubar .menubar__icon {
+    display: none;
+  }
+  .menubar__icon.close-icon {
+    display: block;
+  }
+
+  .nav__bookmark.menu-navbar {
+    display: block;
+  }
+
+  .nav {
+    width: calc(100% - 5.7rem);
+  }
+
+  .main {
+    padding-left: 3rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 62em) {
+  .nav .hide,
+  .main-filters .hide {
+    display: none;
+  }
+
+  .results-container {
+    width: 100%;
+  }
+
+  .results-container svg {
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    display: none;
+    visibility: hidden;
+  }
+
+  .grid-container {
+    width: 100%;
+  }
+  .grid-view {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .results-container-menu {
+    display: block;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 48em) {
+  .main-header .hide {
+    display: none;
+  }
+  .header__title {
+    border: none;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 36em) {
+  .nav {
+    width: calc(100% - 3rem);
+    margin: 1.82rem 1.6rem 0;
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  }
+
+  .nav__item.user {
+    display: none;
+  }
+
+  .main {
+    padding-inline: 1.5rem;
+  }
+
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+}

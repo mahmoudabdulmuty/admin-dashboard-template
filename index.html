@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <title>index</title>
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Menubar -->
+    <menu class="menubar">
+      <div class="menubar__header flex-align-center">
+        <img class="menubar__logo" src="./img/logo.svg" alt="Logo" />
+        <h2 class="menubar__text">Vuexy</h2>
+        <i class="menubar__icon flex-align-center" data-feather="disc"></i>
+        <i
+          class="menubar__icon close-icon flex-align-center"
+          data-feather="x"
+        ></i>
+      </div>
+      <div class="menubar__scroll">
+        <ul class="menubar__list">
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="home"></i>
+              </span>
+              <span class="menubar__item__title">Dashboards</span>
+              <span class="menubar__item__badge">2</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item--header flex-align-center">
+            <span>apps & pages</span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="mail"></i>
+              </span>
+              <span class="menubar__item__title">Email</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="menubar__item__title">Chat</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="check-square"></i>
+              </span>
+              <span class="menubar__item__title">Todo</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="menubar__item__title">Calendar</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="file-text"></i>
+              </span>
+              <span class="menubar__item__title">Invoice</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item menubar__item--active flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="shopping-cart"></i>
+              </span>
+              <span class="menubar__item__title">eCommerce</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-down"></i>
+            </span>
+          </li>
+          <ul class="menubar__drop-list">
+            <li class="menubar__item menubar__item--bg flex-align-center">
+              <a class="menubar__item-wrapper flex-align-center" href="#">
+                <span class="menubar__item__icon flex-align-center">
+                  <i data-feather="circle"></i>
+                </span>
+                <span class="menubar__item__title">Shop</span>
+              </a>
+            </li>
+            <li class="menubar__item flex-align-center">
+              <a class="menubar__item-wrapper flex-align-center" href="#">
+                <span class="menubar__item__icon flex-align-center">
+                  <i data-feather="circle"></i>
+                </span>
+                <span class="menubar__item__title">Details</span>
+              </a>
+            </li>
+            <li class="menubar__item flex-align-center">
+              <a class="menubar__item-wrapper flex-align-center" href="#">
+                <span class="menubar__item__icon flex-align-center">
+                  <i data-feather="circle"></i>
+                </span>
+                <span class="menubar__item__title">Wishlist</span>
+              </a>
+            </li>
+            <li class="menubar__item flex-align-center">
+              <a class="menubar__item-wrapper flex-align-center" href="#">
+                <span class="menubar__item__icon flex-align-center">
+                  <i data-feather="circle"></i>
+                </span>
+                <span class="menubar__item__title">Checkout</span>
+              </a>
+            </li>
+          </ul>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="user"></i>
+              </span>
+              <span class="menubar__item__title">User</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="file"></i>
+              </span>
+              <span class="menubar__item__title">Pages</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item--header flex-align-center">
+            <span>user interface</span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="type"></i>
+              </span>
+              <span class="menubar__item__title">Typography</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="droplet"></i>
+              </span>
+              <span class="menubar__item__title">Colors</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="eye"></i>
+              </span>
+              <span class="menubar__item__title">Feather</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="credit-card"></i>
+              </span>
+              <span class="menubar__item__title">Cards</span>
+              <span class="menubar__item__badge--green">new</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="archive"></i>
+              </span>
+              <span class="menubar__item__title">Components</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="plus-circle"></i>
+              </span>
+              <span class="menubar__item__title">Extensions</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="layout"></i>
+              </span>
+              <span class="menubar__item__title">Page Layouts</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item--header flex-align-center">
+            <span>Forms & Tables</span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="copy"></i>
+              </span>
+              <span class="menubar__item__title">Forms elements</span>
+            </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="copy"></i>
+              </span>
+              <span class="menubar__item__title">Form Layout</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="package"></i>
+              </span>
+              <span class="menubar__item__title">Form Wizard</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="check-circle"></i>
+              </span>
+              <span class="menubar__item__title">Form Validation</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="copy"></i>
+              </span>
+              <span class="menubar__item__title">Form Repeater</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="server"></i>
+              </span>
+              <span class="menubar__item__title">BS Table</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="menubar__item__title">Good Table</span>
+            </a>
+          </li>
+          <li class="menubar__item--header flex-align-center">
+            <span>charts & maps</span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="menubar__item__title">Charts</span>
+              <span class="menubar__item__badge--orange">3</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="map"></i>
+              </span>
+              <span class="menubar__item__title">Leaflet</span>
+            </a>
+          </li>
+          <li class="menubar__item--header flex-align-center">
+            <span>others</span>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="shield"></i>
+              </span>
+              <span class="menubar__item__title">Access Control</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="menu"></i>
+              </span>
+              <span class="menubar__item__title">Menu Levels</span>
+            </a>
+          </li>
+          <li class="menubar__item disabled flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="eye-off"></i>
+              </span>
+              <span class="menubar__item__title">Disabled Menu</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="life-buoy"></i>
+              </span>
+              <span class="menubar__item__title">Raise Support</span>
+            </a>
+          </li>
+          <li class="menubar__item flex-align-center">
+            <a class="menubar__item-wrapper flex-align-center" href="#">
+              <span class="menubar__item__icon flex-align-center">
+                <i data-feather="file-text"></i>
+              </span>
+              <span class="menubar__item__title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </menu>
+    <!-- Navbar -->
+    <nav class="nav flex-align-center">
+      <div class="nav__container flex-align-center">
+        <ul class="nav__bookmark-wrapper flex-align-center">
+          <li class="nav__bookmark menu-navbar">
+            <i data-feather="menu"></i>
+          </li>
+          <li class="nav__bookmark hide">
+            <i data-feather="calendar"></i>
+          </li>
+          <li class="nav__bookmark hide">
+            <i data-feather="message-square"></i>
+          </li>
+          <li class="nav__bookmark hide">
+            <i data-feather="mail"></i>
+          </li>
+          <li class="nav__bookmark hide">
+            <i data-feather="check-square"></i>
+          </li>
+          <li class="nav__bookmark hide star">
+            <i data-feather="star"></i>
+          </li>
+        </ul>
+        <ul class="nav__list gap-1 flex-align-center ml-auto">
+          <li class="nav__item gap-1 flex-align-center">
+            <img
+              class="nav__language"
+              src="./img/usa-flag.png"
+              alt="usa flag"
+            />
+            <span>English</span>
+          </li>
+          <li class="nav__item hide flex-align-center">
+            <i data-feather="moon"></i>
+          </li>
+          <li class="nav__item flex-align-center">
+            <i data-feather="search"></i>
+          </li>
+          <li class="nav__item cart flex-align-center">
+            <i data-feather="shopping-cart"></i>
+          </li>
+          <li class="nav__item bell flex-align-center">
+            <i data-feather="bell"></i>
+          </li>
+          <li class="nav__item user flex-align-center">
+            <span class="nav__user">
+              <span class="nav__username">John Doe</span>
+              <span class="nav__userstatus">admin</span>
+            </span>
+          </li>
+          <li class="nav__item flex-align-center">
+            <span class="nav__avatar">
+              <img src="./img/avatar.png" alt="avatar" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Main -->
+    <main class="main">
+      <!-- Main-Header -->
+      <section class="main-header flex-align-center">
+        <h2 class="header__title">Shop</h2>
+        <ul class="breadcrumb flex-align-center hide">
+          <li class="flex-align-center">
+            <i data-feather="home"></i>
+          </li>
+          <li class="flex-align-center">
+            <i data-feather="chevron-right"></i>
+          </li>
+          <li class="flex-align-center">
+            <span>ECommerce</span>
+          </li>
+          <li class="flex-align-center active">
+            <i data-feather="chevron-right"></i>
+          </li>
+          <li class="flex-align-center active">
+            <span>Shop</span>
+          </li>
+        </ul>
+        <button class="btn btn--full flex-align-center ml-auto hide">
+          <i data-feather="settings"></i>
+        </button>
+      </section>
+      <!-- Main-Filters -->
+      <section class="main-filters flex-align-center">
+        <div class="filters__title hide">
+          <h6>Filters</h6>
+        </div>
+        <div
+          class="results-container flex-align-center justify-between fixed-width"
+        >
+          <i class="results-container-menu" data-feather="menu"></i>
+          <h6 class="filters__results hide">27 results found</h6>
+          <div class="flex-align-center">
+            <div class="btn-group flex-align-center gap-1">
+              <button class="btn btn--outline flex-align-center gap-1">
+                Featured
+                <i data-feather="chevron-down"></i>
+              </button>
+              <ul style="display: none"></ul>
+            </div>
+            <div class="radio-group flex-align-center">
+              <label class="list-view-label flex-align-center"
+                ><input class="list-view" type="radio" name="list-view" />
+                <i data-feather="grid"></i>
+              </label>
+              <label class="list-view-label flex-align-center"
+                ><input class="list-view" type="radio" name="list-view" />
+                <i data-feather="list"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content-Wrapper -->
+      <section class="content-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar gap-2">
+          <div class="multi-range">
+            <h6>Multi Range</h6>
+            <div class="radio-group">
+              <div class="flex-align-center gap-1">
+                <input
+                  class="multiRange"
+                  type="radio"
+                  name="multi-range"
+                  id="all"
+                  value="all"
+                />
+                <label for="all">All</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input
+                  class="multiRange"
+                  type="radio"
+                  name="multi-range"
+                  id="small"
+                  value="10"
+                />
+                <label for="small">&lt;= $10</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input
+                  class="multiRange"
+                  type="radio"
+                  name="multi-range"
+                  id="medium"
+                  value="100"
+                />
+                <label for="medium">$10 - $100</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input
+                  class="multiRange"
+                  type="radio"
+                  name="multi-range"
+                  id="large"
+                  value="500"
+                />
+                <label for="large">$100 - $500</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input
+                  class="multiRange"
+                  type="radio"
+                  name="multi-range"
+                  id="xlarge"
+                  value="1000"
+                />
+                <label for="xlarge">&gt;= $500</label>
+              </div>
+            </div>
+          </div>
+          <div class="categories">
+            <h6>Categories</h6>
+            <div class="radio-group">
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="appliances" />
+                <label for="appliances">Appliances</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="audio" />
+                <label for="audio">Audio</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="cameras" />
+                <label for="cameras">Cameras & Camcorders</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="car" />
+                <label for="car">Car Electronics & GPS</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="phones" />
+                <label for="phones">Cell Phones</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="computers" />
+                <label for="computers">Computers & Tablets</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="health" />
+                <label for="health">Health, Fitness & Beauty</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="office" />
+                <label for="office">Office & School Supplies</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="tv" />
+                <label for="tv">TV & Home Theater</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="categories" id="video" />
+                <label for="video">Video Games</label>
+              </div>
+            </div>
+          </div>
+          <div class="brands">
+            <h6>Brands</h6>
+            <div class="radio-group">
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="insignia" />
+                <label for="insignia">Insignia™</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="samsung" />
+                <label for="samsung">Samsung</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="metra" />
+                <label for="metra">Metra</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="hp" />
+                <label for="hp">HP</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="apple" />
+                <label for="apple">Apple</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="ge" />
+                <label for="ge">GE</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="sony" />
+                <label for="sony">Sony</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="incipio" />
+                <label for="incipio">Incipio</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="kitchen" />
+                <label for="kitchen">KitchenAid</label>
+              </div>
+              <div class="flex-align-center gap-1">
+                <input type="radio" name="brands" id="whirlpool" />
+                <label for="whirlpool">Whirlpool</label>
+              </div>
+            </div>
+          </div>
+          <div class="ratings gap-1">
+            <h6 class="ratings-title">Ratings</h6>
+            <div class="ratings-list">
+              <div class="flex-align-center justify-between">
+                <div class="flex-align-center cursor-pointer">
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <span> & up</span>
+                </div>
+                <div class="stars-received">
+                  <span>160</span>
+                </div>
+              </div>
+            </div>
+            <div class="ratings-list">
+              <div class="flex-align-center justify-between">
+                <div class="flex-align-center cursor-pointer">
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <span> & up</span>
+                </div>
+                <div class="stars-received">
+                  <span>176</span>
+                </div>
+              </div>
+            </div>
+            <div class="ratings-list">
+              <div class="flex-align-center justify-between">
+                <div class="flex-align-center cursor-pointer">
+                  <i class="warning" data-feather="star"></i>
+                  <i class="warning" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <span> & up</span>
+                </div>
+                <div class="stars-received"><span>291</span></div>
+              </div>
+            </div>
+            <div class="ratings-list">
+              <div class="flex-align-center justify-between">
+                <div class="flex-align-center cursor-pointer">
+                  <i class="warning" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <i class="muted" data-feather="star"></i>
+                  <span> & up</span>
+                </div>
+                <div class="stars-received"><span>190</span></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Grid-Container -->
+        <div class="grid-container">
+          <div class="search-bar flex-align-center">
+            <input type="text" id="search" placeholder="Search Product" />
+            <div class="input-group-append flex-align-center">
+              <div class="input-group-text flex-align-center">
+                <i data-feather="search"></i>
+              </div>
+            </div>
+          </div>
+          <div class="grid-view"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer flex-align-center justify-between">
+      <span class="flex-align-center"
+        >COPYRIGHT © 2022
+        <a href="#">Pixinvent</a>
+        All rights Reserved
+      </span>
+      <span class="flex-align-center gap-1"
+        >Hand-crafted &amp; Made with
+        <i data-feather="heart"></i>
+      </span>
+    </footer>
+    <!-- Buy Now Button -->
+    <div class="buy-now">
+      <a href="#">Buy Now</a>
+    </div>
+    <!-- Scroll to top -->
+    <div id="toTopBtn" class="btn-scroll-to-top">
+      <button class="btn">
+        <i data-feather="arrow-up"></i>
+      </button>
+    </div>
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Products -->
+    <script src="products.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
