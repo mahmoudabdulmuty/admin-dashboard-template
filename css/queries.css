@@ -63,7 +63,8 @@
   .grid-container {
     width: 100%;
   }
-  .grid-view {
+
+  .grid.grid-view {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -82,6 +83,29 @@
   }
   .header__title {
     border: none;
+  }
+
+  .grid.list-view .card {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.list-view .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid.list-view .img-box img {
+    width: auto;
+  }
+
+  .grid.list-view .btn-wishlist {
+    width: 95%;
+  }
+
+  .grid.list-view .btn-cart {
+    width: 95%;
+    margin-bottom: 1.4rem;
   }
 }
 
@@ -104,7 +128,7 @@
     padding-inline: 1.5rem;
   }
 
-  .grid-view {
+  .grid.grid-view {
     grid-template-columns: 1fr;
   }
 }

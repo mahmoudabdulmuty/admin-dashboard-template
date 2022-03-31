@@ -14,6 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dark-mode.css" />
     <link rel="stylesheet" href="./css/queries.css" />
     <title>index</title>
   </head>
@@ -390,8 +391,9 @@
             />
             <span>English</span>
           </li>
-          <li class="nav__item hide flex-align-center">
+          <li class="nav__item hide flex-align-center dark-mode">
             <i data-feather="moon"></i>
+            <i style="display: none" data-feather="sun"></i>
           </li>
           <li class="nav__item flex-align-center">
             <i data-feather="search"></i>
@@ -544,43 +546,83 @@
             <h6>Categories</h6>
             <div class="radio-group">
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="appliances" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="appliances"
+                  value="appliances"
+                />
                 <label for="appliances">Appliances</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="audio" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="audio"
+                  value="audio"
+                />
                 <label for="audio">Audio</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="cameras" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="cameras"
+                  value="cameras"
+                />
                 <label for="cameras">Cameras & Camcorders</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="car" />
+                <input type="radio" name="categories" id="car" value="car" />
                 <label for="car">Car Electronics & GPS</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="phones" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="phones"
+                  value="phones"
+                />
                 <label for="phones">Cell Phones</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="computers" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="computers"
+                  value="computers"
+                />
                 <label for="computers">Computers & Tablets</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="health" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="health"
+                  value="health"
+                />
                 <label for="health">Health, Fitness & Beauty</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="office" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="office"
+                  value="office"
+                />
                 <label for="office">Office & School Supplies</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="tv" />
+                <input type="radio" name="categories" id="tv" value="tv" />
                 <label for="tv">TV & Home Theater</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="categories" id="video" />
+                <input
+                  type="radio"
+                  name="categories"
+                  id="video"
+                  value="video"
+                />
                 <label for="video">Video Games</label>
               </div>
             </div>
@@ -589,43 +631,58 @@
             <h6>Brands</h6>
             <div class="radio-group">
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="insignia" />
+                <input
+                  type="radio"
+                  name="brands"
+                  id="insignia"
+                  value="google"
+                />
                 <label for="insignia">Insignia™</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="samsung" />
+                <input
+                  type="radio"
+                  name="brands"
+                  id="samsung"
+                  value="philips"
+                />
                 <label for="samsung">Samsung</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="metra" />
+                <input type="radio" name="brands" id="metra" value="logitech" />
                 <label for="metra">Metra</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="hp" />
+                <input type="radio" name="brands" id="hp" value="nike" />
                 <label for="hp">HP</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="apple" />
+                <input type="radio" name="brands" id="apple" value="apple" />
                 <label for="apple">Apple</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="ge" />
+                <input
+                  type="radio"
+                  name="brands"
+                  id="ge"
+                  value="vankyo store"
+                />
                 <label for="ge">GE</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="sony" />
+                <input type="radio" name="brands" id="sony" value="sony" />
                 <label for="sony">Sony</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="incipio" />
+                <input type="radio" name="brands" id="incipio" value="bose" />
                 <label for="incipio">Incipio</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="kitchen" />
+                <input type="radio" name="brands" id="kitchen" value="3M" />
                 <label for="kitchen">KitchenAid</label>
               </div>
               <div class="flex-align-center gap-1">
-                <input type="radio" name="brands" id="whirlpool" />
+                <input type="radio" name="brands" id="whirlpool" value="hobo" />
                 <label for="whirlpool">Whirlpool</label>
               </div>
             </div>
@@ -729,8 +786,10 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Products -->
-    <script src="products.js"></script>
+    <script src="./js/products.js"></script>
     <!-- Custom JS -->
-    <script src="app.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/darkMode.js"></script>
   </body>
+  ./js/
 </html>

@@ -6,10 +6,11 @@ const products = [
     rating: 4,
     img: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png',
     description:
-      'On Retina display that never sleeps, so it’s easy to see the time and other important information, without raising or tapping the display. New location features, from a built-in compass to current elevation, help users better navigate their day, while international emergency calling1 allows customers to call emergency services directly from Apple Watch in over 150 countries, even without iPhone nearby. Apple Watch Series 5 is available in a wider range of materials, including aluminium, stainless steel, ceramic and an all-new titanium.',
+      ' On Retina display that never sleeps, so it’s easy to see the time and other important information, without raising or tapping the display. New location features, from a built-in compass to current elevation, help users better navigate their day, while international emergency calling1 allows customers  call emergency services directly from Apple Watch in over 150 countries, even without iPhone nearby. Apple Wat Series 5 is available in a wider range of materials, including aluminium, stainless steel, ceramic and  all-new titanium. ',
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'phones',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'phones',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'computers',
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'audio',
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'computers',
   },
   {
     id: 6,
@@ -70,18 +75,20 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'video',
   },
   {
     id: 7,
     name: 'Google - Google Home - White/Slate fabric',
     price: 129.29,
     rating: 4,
-    img: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png',
+    img: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/7.2a004c66.png',
     description:
       'On Retina display that never sleeps, so it’s easy to see the time and other important information, without raising or tapping the display. New location features, from a built-in compass to current elevation, help users better navigate their day, while international emergency calling1 allows customers to call emergency services directly from Apple Watch in over 150 countries, even without iPhone nearby. Apple Watch Series 5 is available in a wider range of materials, including aluminium, stainless steel, ceramic and an all-new titanium.',
     brand: 'google',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'appliances',
   },
   {
     id: 8,
@@ -94,6 +101,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'tv',
   },
   {
     id: 9,
@@ -106,6 +114,7 @@ const products = [
     brand: 'Philips',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'phones',
   },
   {
     id: 10,
@@ -118,6 +127,7 @@ const products = [
     brand: 'Logitech',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'computers',
   },
   {
     id: 11,
@@ -130,6 +140,7 @@ const products = [
     brand: 'Nike',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'appliances',
   },
   {
     id: 12,
@@ -142,6 +153,7 @@ const products = [
     brand: 'apple',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'phones',
   },
   {
     id: 13,
@@ -154,6 +166,7 @@ const products = [
     brand: 'Vankyo Store',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'cameras',
   },
   {
     id: 14,
@@ -166,6 +179,7 @@ const products = [
     brand: '3M',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'office',
   },
   {
     id: 15,
@@ -178,6 +192,7 @@ const products = [
     brand: 'TAS',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'computers',
   },
   {
     id: 16,
@@ -190,6 +205,7 @@ const products = [
     brand: 'Adidas',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'appliances',
   },
   {
     id: 17,
@@ -202,6 +218,7 @@ const products = [
     brand: 'Oculus',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'office',
   },
   {
     id: 18,
@@ -214,6 +231,7 @@ const products = [
     brand: 'Hobo',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'health',
   },
   {
     id: 19,
@@ -226,6 +244,7 @@ const products = [
     brand: '3M',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'health',
   },
   {
     id: 20,
@@ -238,6 +257,7 @@ const products = [
     brand: 'Sony',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'video',
   },
   {
     id: 21,
@@ -250,6 +270,7 @@ const products = [
     brand: 'Bugani',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'tv',
   },
   {
     id: 22,
@@ -262,6 +283,7 @@ const products = [
     brand: 'Toshiba',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'tv',
   },
   {
     id: 23,
@@ -274,6 +296,7 @@ const products = [
     brand: 'Tile',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'office',
   },
   {
     id: 24,
@@ -286,6 +309,7 @@ const products = [
     brand: 'Ronyes',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'health',
   },
   {
     id: 25,
@@ -298,6 +322,7 @@ const products = [
     brand: 'Willful',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'car',
   },
   {
     id: 26,
@@ -310,6 +335,7 @@ const products = [
     brand: 'VicTsing',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'computers',
   },
   {
     id: 27,
@@ -322,5 +348,6 @@ const products = [
     brand: 'Bose',
     available: true,
     colors: ['red', 'purple', 'green'],
+    category: 'audio',
   },
 ];
