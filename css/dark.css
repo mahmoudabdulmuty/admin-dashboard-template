@@ -1,0 +1,95 @@
+body#dark-mode {
+  background-color: #161d31;
+  color: #b4b7bd;
+}
+
+body#dark-mode .nav {
+  background-color: #283046;
+}
+
+body#dark-mode .nav .nav__bookmark:not(.star),
+body#dark-mode .nav .nav__list {
+  color: #b4b7bd;
+}
+
+body#dark-mode .menubar {
+  background-color: #283046;
+}
+
+body#dark-mode .menubar .menubar__list .menubar__item a {
+  color: #b4b7bd;
+}
+
+body#dark-mode .menubar__item.menubar__item--active {
+  background-color: #161d31;
+}
+
+body#dark-mode .menubar__drop-list .menubar__item.menubar__item--bg a {
+  color: #fff;
+}
+
+body#dark-mode .main {
+  background-color: #161d31;
+}
+
+.header__title,
+.filters__results,
+.filters__title h6 {
+  color: #d0d2d6;
+}
+
+body#dark-mode .sidebar {
+  background-color: #283046;
+}
+
+body#dark-mode .sidebar h6,
+body#dark-mode .sidebar .radio-group label,
+body#dark-mode .sidebar .stars-received span {
+  color: #b4b7bd;
+}
+
+body#dark-mode .sidebar .ratings svg:not(.warning) {
+  color: #676d7d;
+}
+
+body#dark-mode .btn--outline {
+  background-color: #161d31;
+}
+
+body#dark-mode .search-bar input {
+  background-color: #283046;
+  border-radius: 0;
+}
+
+body#dark-mode .search-bar input::placeholder,
+body#dark-mode .search-bar svg {
+  color: #676d7d;
+}
+
+body#dark-mode .input-group-text {
+  background-color: #283046;
+  border-color: #3b4253;
+  border-radius: 0;
+}
+
+body#dark-mode .card {
+  background-color: #283046;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 24%);
+}
+
+body#dark-mode .btn-wishlist {
+  background-color: #161d31;
+  color: var(--white-color);
+  border-color: transparent;
+}
+
+body#dark-mode .card-body .item-price,
+body#dark-mode .card-body .item-name-link,
+body#dark-mode .card-body .item-description {
+  color: #b4b7bd;
+}
+
+body#dark-mode .footer {
+  background-color: #161d31;
+  color: #b4b7bd;
+}
