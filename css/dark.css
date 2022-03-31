@@ -32,9 +32,9 @@ body#dark-mode .main {
   background-color: #161d31;
 }
 
-.header__title,
-.filters__results,
-.filters__title h6 {
+body#dark-mode .header__title,
+body#dark-mode .filters__results,
+body#dark-mode .filters__title h6 {
   color: #d0d2d6;
 }
 
