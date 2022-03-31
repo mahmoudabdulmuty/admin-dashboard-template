@@ -34,6 +34,10 @@
   .main {
     padding-left: 3rem;
   }
+
+  .footer {
+    padding: 2rem;
+  }
 }
 
 /**************************/
@@ -70,6 +74,10 @@
 
   .results-container-menu {
     display: block;
+  }
+
+  .footer span:nth-child(2) {
+    display: none;
   }
 }
 
