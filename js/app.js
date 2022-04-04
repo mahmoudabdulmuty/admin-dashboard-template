@@ -14,7 +14,12 @@ const closeIcon = document.querySelector('.close-icon');
 const listViewBtns = document.querySelectorAll('.option-view');
 const listViewBtnsLabel = document.querySelectorAll('.list-view-label');
 const overlay = document.querySelector('.overlay');
-
+const featuredBtn = document.querySelector('.featured-btn');
+const featuredDropdown = document.querySelector('.featured-dropdown');
+const featuredSortBtn = document.querySelector('.featured-sort');
+const lowestSortBtn = document.querySelector('.lowest-sort');
+const highestSortBtn = document.querySelector('.highest-sort');
+const featuredTextValue = document.querySelector('.featured-text');
 
 window.addEventListener('DOMContentLoaded', displayProducts);
 window.addEventListener('DOMContentLoaded', filterPrice);
@@ -22,6 +27,71 @@ window.addEventListener('DOMContentLoaded', filterBrands);
 window.addEventListener('DOMContentLoaded', filterCategories);
 searchInput.addEventListener('input', filterList);
 scrollToTop.addEventListener('click', topFunction);
+
+featuredBtn.addEventListener('click', () => {
+  if (featuredDropdown.style.display === 'none') {
+    featuredDropdown.style.display = '';
+  } else {
+    featuredDropdown.style.display = 'none';
+  }
+  filterPrice();
+  filterBrands();
+  filterCategories();
+});
+
+highestSortBtn.addEventListener('click', () => {
+  products.sort((b, a) => {
+    if (a.price < b.price) {
+      return -1;
+    } else if (a.price > b.price) {
+      return 1;
+    }
+    return 0;
+  });
+
+  displayProducts();
+  filterPrice();
+  filterBrands();
+  filterCategories();
+
+  featuredTextValue.textContent = 'Highest';
+});
+
+lowestSortBtn.addEventListener('click', () => {
+  products.sort((b, a) => {
+    if (a.price > b.price) {
+      return -1;
+    } else if (a.price < b.price) {
+      return 1;
+    }
+    return 0;
+  });
+
+  displayProducts();
+  filterPrice();
+  filterBrands();
+  filterCategories();
+
+  featuredTextValue.textContent = 'Lowest';
+});
+
+featuredSortBtn.addEventListener('click', () => {
+  products.sort((b, a) => {
+    if (a.id > b.id) {
+      return -1;
+    } else if (a.id < b.id) {
+      return 1;
+    }
+    return 0;
+  });
+
+  displayProducts();
+  filterPrice();
+  filterBrands();
+  filterCategories();
+
+  featuredTextValue.textContent = 'Featured';
+});
 
 // list-grid-view toggle
 listViewBtns.forEach((btn, i) => {
@@ -58,15 +128,32 @@ function filterPrice() {
   multiRangeInputs.forEach((input) => {
     input.addEventListener('click', (e) => {
       const priceValue = e.target.value;
+
+      const filterResults = document.querySelector('.filters__results');
+      let filterResultsSum = 0;
+
       productPrices.forEach((price, index) => {
+        gridCards[index].style.display = 'none';
         if (priceValue === 'all') {
           gridCards[index].style.display = '';
-        } else if (price > +priceValue) {
-          gridCards[index].style.display = 'none';
-        } else if (price <= +priceValue) {
+          filterResultsSum += 1;
+        } else if (price >= 500 && priceValue === '1000') {
           gridCards[index].style.display = '';
+          filterResultsSum += 1;
+        } else if (price >= 100 && price <= 500 && priceValue === '500') {
+          gridCards[index].style.display = '';
+          filterResultsSum += 1;
+        } else if (price >= 10 && price <= 100 && priceValue === '100') {
+          gridCards[index].style.display = '';
+          filterResultsSum += 1;
+        } else if (price <= 10 && priceValue === '10') {
+          gridCards[index].style.display = '';
+          filterResultsSum += 1;
         }
       });
+
+      filterResults.textContent = `${filterResultsSum} results found`;
+      filterResultsSum = 0;
     });
   });
 }
@@ -79,15 +166,23 @@ function filterBrands() {
 
   brandsInputs.forEach((input) => {
     input.addEventListener('click', (e) => {
+      const filterResults = document.querySelector('.filters__results');
+      let filterResultsSum = 0;
+
       const brandName = e.target.value.toLowerCase();
+
       productBrands.forEach((brand, index) => {
         brand = brand.toLowerCase();
         if (brand === brandName) {
           gridCards[index].style.display = '';
+          filterResultsSum++;
         } else {
           gridCards[index].style.display = 'none';
         }
       });
+
+      filterResults.textContent = `${filterResultsSum} results found`;
+      filterResultsSum = 0;
     });
   });
 }
@@ -100,15 +195,23 @@ function filterCategories() {
 
   categoriesInputs.forEach((input) => {
     input.addEventListener('click', (e) => {
+      const filterResults = document.querySelector('.filters__results');
+      let filterResultsSum = 0;
+
       const categoryName = e.target.value.toLowerCase();
+
       productCategories.forEach((category, index) => {
         category = category.toLowerCase();
         if (category === categoryName) {
           gridCards[index].style.display = '';
+          filterResultsSum++;
         } else {
           gridCards[index].style.display = 'none';
         }
       });
+
+      filterResults.textContent = `${filterResultsSum} results found`;
+      filterResultsSum = 0;
     });
   });
 }
@@ -247,8 +350,6 @@ function filterList() {
   const filterResults = document.querySelector('.filters__results');
   let filterResultsSum = 0;
 
-  console.log(gridCards);
-
   productNames.forEach((productName, index) => {
     if (productName.includes(filter)) {
       gridCards[index].style.display = '';
@@ -290,3 +391,53 @@ closeIcon.addEventListener('click', () => {
   menuBar.style.left = '-260px';
   overlay.style.visibility = 'hidden';
 });
+
+// range slider
+
+function getVals() {
+  const gridCards = Array.from(document.querySelectorAll('.card'));
+
+  // Get slider values
+  let parent = this.parentNode;
+  let slides = parent.getElementsByTagName('input');
+  let slide1 = parseFloat(slides[0].value);
+  let slide2 = parseFloat(slides[1].value);
+  // Neither slider will clip the other, so make sure we determine which is larger
+  if (slide1 > slide2) {
+    let tmp = slide2;
+    slide2 = slide1;
+    slide1 = tmp;
+  }
+
+  let displayElement = parent.getElementsByClassName('rangeValues')[0];
+  displayElement.innerHTML = '$' + slide1 + ' - $' + slide2;
+
+  const filterResults = document.querySelector('.filters__results');
+  let filterResultsSum = 0;
+
+  products.forEach((item, index) => {
+    gridCards[index].style.display = 'none';
+    if (item.price > slide1 && item.price < slide2) {
+      gridCards[index].style.display = '';
+      filterResultsSum++;
+    }
+  });
+
+  filterResults.textContent = `${filterResultsSum} results found`;
+  filterResultsSum = 0;
+}
+
+window.onload = function () {
+  // Initialize Sliders
+  let sliderSections = document.getElementsByClassName('range-slider');
+  for (let x = 0; x < sliderSections.length; x++) {
+    let sliders = sliderSections[x].getElementsByTagName('input');
+    for (let y = 0; y < sliders.length; y++) {
+      if (sliders[y].type === 'range') {
+        sliders[y].oninput = getVals;
+        // Manually trigger event first time to display values
+        sliders[y].oninput();
+      }
+    }
+  }
+};

@@ -93,3 +93,25 @@ body#dark-mode .footer {
   background-color: #161d31;
   color: #b4b7bd;
 }
+
+body#dark-mode .featured-dropdown {
+  color: #fff;
+  background-color: #283046;
+  box-shadow: 0 4px 24px 0 rgb(0 0 0 / 24%);
+}
+
+body#dark-mode .featured-dropdown li {
+  color: #b4b7bd;
+}
+
+body#dark-mode .featured-dropdown li:active {
+  color: #fff;
+}
+
+body#dark-mode input[type='range']::-webkit-slider-thumb {
+  background-color: #161d31;
+}
+
+body#dark-mode .rangeValues {
+  color: #fff;
+}

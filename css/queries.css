@@ -1,12 +1,3 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
-
-/**************************/
-/* BELOW 1344px (Smaller desktops) */
-/**************************/
-
-@media (max-width: 84em) {
-}
-
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
@@ -138,5 +129,10 @@
 
   .grid.grid-view {
     grid-template-columns: 1fr;
+  }
+
+  .nav__bookmark-wrapper {
+    padding-top: 0.5rem;
+    flex-basis: 100%;
   }
 }

@@ -1,4 +1,4 @@
-const products = [
+let products = [
   {
     id: 1,
     name: 'Apple Watch Series 5',
@@ -93,7 +93,7 @@ const products = [
   {
     id: 8,
     name: 'Sony 4K Ultra HD LED TV',
-    price: 7999.99,
+    price: 999.99,
     rating: 5,
     img: 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/8.c170e8ca.png',
     description:

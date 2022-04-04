@@ -304,6 +304,9 @@
               <span class="menubar__item__title">Charts</span>
               <span class="menubar__item__badge--orange">3</span>
             </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
           </li>
           <li class="menubar__item flex-align-center">
             <a class="menubar__item-wrapper flex-align-center" href="#">
@@ -331,6 +334,9 @@
               </span>
               <span class="menubar__item__title">Menu Levels</span>
             </a>
+            <span class="menubar__item__chevron flex-align-center">
+              <i class="" data-feather="chevron-right"></i>
+            </span>
           </li>
           <li class="menubar__item disabled flex-align-center">
             <a class="menubar__item-wrapper flex-align-center" href="#">
@@ -424,13 +430,13 @@
       <section class="main-header flex-align-center">
         <h2 class="header__title">Shop</h2>
         <ul class="breadcrumb flex-align-center hide">
-          <li class="flex-align-center">
+          <li class="flex-align-center cursor-pointer">
             <i data-feather="home"></i>
           </li>
           <li class="flex-align-center">
             <i data-feather="chevron-right"></i>
           </li>
-          <li class="flex-align-center">
+          <li class="flex-align-center cursor-pointer">
             <span>ECommerce</span>
           </li>
           <li class="flex-align-center active">
@@ -455,12 +461,16 @@
           <i class="results-container-menu" data-feather="menu"></i>
           <h6 class="filters__results hide">27 results found</h6>
           <div class="flex-align-center">
-            <div class="btn-group flex-align-center gap-1">
+            <div class="featured-btn btn-group flex-align-center gap-1">
               <button class="btn btn--outline flex-align-center gap-1">
-                Featured
+                <span class="featured-text">Featured</span>
                 <i data-feather="chevron-down"></i>
               </button>
-              <ul style="display: none"></ul>
+              <ul style="display: none" class="featured-dropdown">
+                <li class="featured-sort"><a href="#">Featured</a></li>
+                <li class="lowest-sort"><a href="#">Lowest</a></li>
+                <li class="highest-sort"><a href="#">Highest</a></li>
+              </ul>
             </div>
             <div class="radio-group flex-align-center">
               <label class="list-view-label flex-align-center active"
@@ -542,21 +552,11 @@
               </div>
             </div>
           </div>
-          <div class="price-slider">
+          <div class="range-slider">
             <h6>Price Range</h6>
-            <div class="slider">
-              <div class="slider-rail">
-                <div class="slider-process"></div>
-                <div class="slider-dot">
-                  <div class="slider-dot-handle"></div>
-                  <div class="slider-dot-tooltip"></div>
-                </div>
-                <div class="slider-dot left">
-                  <div class="slider-dot-handle"></div>
-                  <div class="slider-dot-tooltip"></div>
-                </div>
-              </div>
-            </div>
+            <span class="rangeValues"></span>
+            <input value="0" min="0" max="1000" step="5" type="range" />
+            <input value="1000" min="0" max="1000" step="5" type="range" />
           </div>
           <div class="categories">
             <h6>Categories</h6>
