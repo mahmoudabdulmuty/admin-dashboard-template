@@ -6,7 +6,7 @@ Built with
 - CSS
 - JS
 
-### [Live Site](https://project-1kh.pages.dev/)
+## <a href="https://frontend-task.pages.dev/" target="_blank">LIVE DEMO</a>
 
 ## Features
 

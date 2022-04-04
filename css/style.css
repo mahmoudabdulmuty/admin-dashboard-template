@@ -412,7 +412,9 @@ img.nav__language {
   border: 1px solid rgba(34, 41, 47, 0.05);
 }
 
-.featured-dropdown li {
+.featured-dropdown li a {
+  display: inline-block;
+  width: 100%;
   color: var(--dark-color);
   cursor: pointer;
   padding: 0.65rem 1.28rem;
@@ -420,12 +422,12 @@ img.nav__language {
   border: 0;
 }
 
-.featured-dropdown li:hover {
+.featured-dropdown li a:hover {
   background-color: rgba(115, 103, 240, 0.12);
   color: #7367f0;
 }
 
-.featured-dropdown li:active {
+.featured-dropdown li a:active {
   background-color: #7367f0;
   color: #fff;
 }
