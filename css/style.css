@@ -198,12 +198,12 @@
   position: fixed;
   right: 0;
   background-color: #fff;
-  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
   margin: 1.82rem 2.8rem 0;
   border-radius: 0.428rem;
   min-height: 4.45rem;
   z-index: 1;
   transition: all 1s;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
 }
 
 .nav__container {

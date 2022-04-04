@@ -5,6 +5,7 @@ body#dark-mode {
 
 body#dark-mode .nav {
   background-color: #283046;
+  box-shadow: 0 4px 24px 0 rgb(22 29 49);
 }
 
 body#dark-mode .nav .nav__bookmark:not(.star),
