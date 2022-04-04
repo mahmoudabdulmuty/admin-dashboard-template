@@ -934,6 +934,15 @@ svg.muted {
   white-space: normal;
 }
 
+.grid.list-view .item-name .item-name-link {
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .item-name .item-name-link:hover {
   color: #5e50ee;
 }
