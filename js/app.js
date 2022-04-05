@@ -28,6 +28,8 @@ window.addEventListener('DOMContentLoaded', filterCategories);
 searchInput.addEventListener('input', filterList);
 scrollToTop.addEventListener('click', topFunction);
 
+
+// featured Button dropdownlist
 featuredBtn.addEventListener('click', () => {
   if (featuredDropdown.style.display === 'none') {
     featuredDropdown.style.display = '';
@@ -39,6 +41,8 @@ featuredBtn.addEventListener('click', () => {
   filterCategories();
 });
 
+
+// Highest, Lowest, Featured sort
 highestSortBtn.addEventListener('click', () => {
   products.sort((b, a) => {
     if (a.price < b.price) {
@@ -113,10 +117,15 @@ listViewBtns.forEach((btn, i) => {
   });
 });
 
+
+// menubar-active dropdown
 menubarActive.addEventListener('click', () => {
   dropDownList.classList.contains('h-zero')
     ? dropDownList.classList.remove('h-zero')
     : dropDownList.classList.add('h-zero');
+
+  // console.log(menubarActive.classList);
+  menubarActive.classList.toggle('chevron-toggle')
 });
 
 // price-filter
@@ -392,8 +401,7 @@ closeIcon.addEventListener('click', () => {
   overlay.style.visibility = 'hidden';
 });
 
-// range slider
-
+// Price Range Slider
 function getVals() {
   const gridCards = Array.from(document.querySelectorAll('.card'));
 

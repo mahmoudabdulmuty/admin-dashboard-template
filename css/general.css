@@ -95,9 +95,9 @@ button {
 .h-zero {
   opacity: 0 !important;
   visibility: hidden;
-  height: 0 !important;
+  max-height: 0 !important;
   overflow: hidden !important;
-  transition: opacity 1s ease-out;
+  transition: all 0.3 ease-out;
 }
 
 .cursor-pointer {
