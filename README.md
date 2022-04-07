@@ -1,22 +1,28 @@
 # frontend-task
 
-Built with
-
+## 🔨 Built With 
 - HTML
 - CSS
 - JS
 
-## <a href="https://frontend-task.pages.dev/" target="_blank">LIVE DEMO</a>
+<br />
 
-## Features
+## 🌐 [LIVE DEMO](https://frontend-task.pages.dev/) 
 
-- Search Products by Title Name.
+<br />
+
+## 📋 Features 
+- Search Products by Title Name
 - Filter Products by Price or Category
 - Price Slider Range Feature
 - Sort Products by Price
 - Toggle (Grid - List) View
 
-# Preview
+<br />
+
+## 🔥 Preview 
+
+<br />
 
 ![Preview (1)](https://user-images.githubusercontent.com/52681435/161135685-989b232a-422e-4e9b-9dff-99fab47658bc.png)
 ![Preview (2)](https://user-images.githubusercontent.com/52681435/161135945-9b5c0c65-ac83-4ada-bdfa-41778a96a94f.png)
