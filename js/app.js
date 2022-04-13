@@ -25,9 +25,9 @@ window.addEventListener('DOMContentLoaded', displayProducts);
 window.addEventListener('DOMContentLoaded', filterPrice);
 window.addEventListener('DOMContentLoaded', filterBrands);
 window.addEventListener('DOMContentLoaded', filterCategories);
+window.addEventListener('DOMContentLoaded', slidersRange);
 searchInput.addEventListener('input', filterList);
 scrollToTop.addEventListener('click', topFunction);
-
 
 // featured Button dropdownlist
 featuredBtn.addEventListener('click', () => {
@@ -40,7 +40,6 @@ featuredBtn.addEventListener('click', () => {
   filterBrands();
   filterCategories();
 });
-
 
 // Highest, Lowest, Featured sort
 highestSortBtn.addEventListener('click', () => {
@@ -117,7 +116,6 @@ listViewBtns.forEach((btn, i) => {
   });
 });
 
-
 // menubar-active dropdown
 menubarActive.addEventListener('click', () => {
   dropDownList.classList.contains('h-zero')
@@ -125,7 +123,7 @@ menubarActive.addEventListener('click', () => {
     : dropDownList.classList.add('h-zero');
 
   // console.log(menubarActive.classList);
-  menubarActive.classList.toggle('chevron-toggle')
+  menubarActive.classList.toggle('chevron-toggle');
 });
 
 // price-filter
@@ -402,22 +400,29 @@ closeIcon.addEventListener('click', () => {
 });
 
 // Price Range Slider
-function getVals() {
+
+function slidersRange() {
+  const rangeSlider = document.querySelectorAll('.range-slider');
+  rangeSlider.forEach((item) => {
+    const inputs = item.querySelectorAll('input');
+    inputs.forEach((input) => {
+      input.oninput = getSliderValues;
+      // Manually trigger event first time to display values
+      input.oninput();
+    });
+  });
+}
+
+function getSliderValues() {
   const gridCards = Array.from(document.querySelectorAll('.card'));
 
   // Get slider values
-  let parent = this.parentNode;
-  let slides = parent.getElementsByTagName('input');
-  let slide1 = parseFloat(slides[0].value);
-  let slide2 = parseFloat(slides[1].value);
-  // Neither slider will clip the other, so make sure we determine which is larger
-  if (slide1 > slide2) {
-    let tmp = slide2;
-    slide2 = slide1;
-    slide1 = tmp;
-  }
+  const rangeSlider = document.querySelector('.range-slider');
+  const slides = rangeSlider.querySelectorAll('input');
+  const slide1 = +slides[0].value;
+  const slide2 = +slides[1].value;
 
-  let displayElement = parent.getElementsByClassName('rangeValues')[0];
+  const displayElement = rangeSlider.querySelector('.range-values');
   displayElement.innerHTML = '$' + slide1 + ' - $' + slide2;
 
   const filterResults = document.querySelector('.filters__results');
@@ -434,18 +439,3 @@ function getVals() {
   filterResults.textContent = `${filterResultsSum} results found`;
   filterResultsSum = 0;
 }
-
-window.onload = function () {
-  // Initialize Sliders
-  let sliderSections = document.getElementsByClassName('range-slider');
-  for (let x = 0; x < sliderSections.length; x++) {
-    let sliders = sliderSections[x].getElementsByTagName('input');
-    for (let y = 0; y < sliders.length; y++) {
-      if (sliders[y].type === 'range') {
-        sliders[y].oninput = getVals;
-        // Manually trigger event first time to display values
-        sliders[y].oninput();
-      }
-    }
-  }
-};
