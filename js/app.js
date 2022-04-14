@@ -26,6 +26,8 @@ window.addEventListener('DOMContentLoaded', filterPrice);
 window.addEventListener('DOMContentLoaded', filterBrands);
 window.addEventListener('DOMContentLoaded', filterCategories);
 window.addEventListener('DOMContentLoaded', slidersRange);
+// trigger displaySliderValues on DOM Load to display values
+window.addEventListener('DOMContentLoaded', displaySliderValues);
 searchInput.addEventListener('input', filterList);
 scrollToTop.addEventListener('click', topFunction);
 
@@ -406,14 +408,12 @@ function slidersRange() {
   rangeSlider.forEach((item) => {
     const inputs = item.querySelectorAll('input');
     inputs.forEach((input) => {
-      input.oninput = getSliderValues;
-      // Manually trigger event first time to display values
-      input.oninput();
+      input.addEventListener('input', displaySliderValues);
     });
   });
 }
 
-function getSliderValues() {
+function displaySliderValues() {
   const gridCards = Array.from(document.querySelectorAll('.card'));
 
   // Get slider values

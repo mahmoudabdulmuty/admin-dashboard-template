@@ -1,4 +1,4 @@
-# admin-dashboard-template/e-commerce-shop
+# frontend-task
 
 ## 🔨 Built With 
 - HTML
